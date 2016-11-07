@@ -1,0 +1,523 @@
+@media only screen and (min-width: 650px) {
+  #secbb {
+    display: none;
+  }
+  .wrap {
+    width: 100%;
+    top: 0;
+    font-family: Arial, sans-serif, Microsoft YaHei;
+    box-shadow: 0 1px 2px gray;
+    margin-bottom: 2px;
+  }
+  .wrap .nav_phone {
+    display: none;
+  }
+  .wrap .nav_pc {
+    overflow: hidden;
+    height: 65px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .wrap .nav_pc div.logo {
+    float: left;
+    margin-left: 7.4%;
+    width: 13%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .wrap .nav_pc div.logo a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .wrap .nav_pc div.logo a img {
+    width: 100%;
+    float: left;
+  }
+  .wrap .nav_pc ul {
+    width: 70%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+  }
+  .wrap .nav_pc ul a {
+    min-width: 16%;
+    text-align: center;
+    height: 100%;
+    line-height: 65px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+  }
+  .wrap .nav_pc ul a:hover {
+    transition: 2s;
+    background-color: #CFDB00;
+  }
+  .wrap .nav_pc ul a:nth-of-type(3) {
+    background-color: #CFDB00;
+  }
+  section {
+    background-color: #F5F5F5;
+  }
+  section .menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #808080;
+  }
+  section .menu a {
+    width: 15%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: center;
+    color: #808080;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  section .menu a:hover {
+    background-color: #808080;
+    transition: .5s;
+    color: white;
+  }
+  section .menuarrow {
+    display: none;
+    background-color: white;
+  }
+  section div.secTitle {
+    width: 650px;
+    height: 130px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  section div.secTitle img {
+    width: 100px;
+  }
+  section div.secTitle span {
+    font-size: 2.2em;
+    line-height: 130px;
+    width: 450px;
+    text-align: center;
+    font-weight: bold;
+    color: #616161;
+    font-family: arial;
+  }
+  section .arow {
+    width: 980px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  section .arow .first {
+    width: 810px;
+    height: 420px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+  }
+  section .arow .first .train {
+    width: 4050px;
+    height: 420px;
+    position: absolute;
+    top: 0;
+  }
+  section .arow .first .train img {
+    width: 810px;
+    height: 420px;
+    float: left;
+  }
+  section .arow .first .dot {
+    position: relative;
+    width: 75px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  section .arow .first .dot a {
+    height: 10px;
+    width: 10px;
+    background-color: gray;
+    border-radius: 50% 50%;
+    float: left;
+    margin: 0 0 10px;
+  }
+  section .arow ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  section .arow ul li {
+    width: 20%;
+    overflow: hidden;
+  }
+  section .arow ul li div {
+    width: 100%;
+    background-color: red;
+    margin-top: 10px;
+    overflow: hidden;
+    min-width: 0;
+    background-image: url("../img/P_00.jpg");
+    background-position: center center;
+  }
+  section .arow ul li div a {
+    opacity: 0;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-color: rgba(254, 254, 65, 0.5);
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  section .arow ul li div a img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  section .arow ul li div a span {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    display: block;
+  }
+  section .arow ul li div:hover a {
+    opacity: 1;
+  }
+  section .arow #air {
+    margin-top: 100px;
+  }
+  footer {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #BFBFBF;
+  }
+  footer div:nth-of-type(1) {
+    width: 400px;
+    height: 130px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  footer div:nth-of-type(1) img {
+    width: 98px;
+  }
+  footer div:nth-of-type(1) span {
+    font-size: 2.2em;
+    line-height: 130px;
+    width: 196px;
+    text-align: center;
+    font-weight: bold;
+    color: #616161;
+    font-family: arial;
+  }
+  footer .foot {
+    padding-bottom: 90px;
+  }
+  footer .foot p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: arial;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+  }
+  footer .foot p:nth-of-type(4) {
+    display: none;
+  }
+  .bot {
+    border-top: 2px solid yellow;
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    background-color: #B4B4B4;
+    line-height: 64px;
+    color: white;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: lighter;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-family: Arial, sans-serif, Microsoft YaHei;
+    box-shadow: 0 1px 2px gray;
+    z-index: 9999;
+    background-color: white;
+    margin-bottom: 2px;
+  }
+  .wrap .nav_pc {
+    display: none;
+  }
+  .wrap .nav_phone {
+    height: 48px;
+    overflow: hidden;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .wrap .nav_phone div.logo {
+    float: left;
+    margin-left: 7.4%;
+    width: 21%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .wrap .nav_phone div.logo a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .wrap .nav_phone div.logo a img {
+    width: 100%;
+    float: left;
+  }
+  .wrap .nav_phone .phoneNavImg {
+    float: right;
+    width: 35px;
+    height: 30px;
+    margin-right: 50px;
+    margin-top: 9px;
+  }
+  #HomeMidP1 {
+    text-align: right;
+    margin-right: 20px;
+  }
+  #HomeMidP2 {
+    text-align: center;
+    margin-right: 20px;
+  }
+  #secaa {
+    display: none;
+  }
+  footer {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #BFBFBF;
+  }
+  footer div:nth-of-type(1) {
+    width: 400px;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer div:nth-of-type(1) img {
+    width: 80px;
+  }
+  footer div:nth-of-type(1) span {
+    font-size: 1.5em;
+    line-height: 80px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    color: #616161;
+    font-family: arial;
+  }
+  footer .foot {
+    padding-bottom: 60px;
+  }
+  footer .foot p {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: arial;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+    width: 400px;
+    margin: 0 auto;
+  }
+  footer .foot p:nth-of-type(3) {
+    display: none;
+  }
+  .bot {
+    border-top: 2px solid yellow;
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    background-color: #B4B4B4;
+    line-height: 64px;
+    color: white;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: lighter;
+    font-weight: bold;
+  }
+  section {
+    margin-top: 50px;
+  }
+  section div.secTitle {
+    width: 100%;
+    min-width: 400px;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section div.secTitle img {
+    width: 70px;
+  }
+  section div.secTitle span {
+    font-size: 1.5em;
+    line-height: 80px;
+    width: 280px;
+    text-align: center;
+    font-weight: bold;
+    color: #616161;
+    font-family: arial;
+  }
+  section .arow {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  section .arow .first {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+  }
+  section .arow .first .train {
+    width: 4050px;
+    height: 420px;
+    top: 0;
+    position: absolute;
+  }
+  section .arow .first .train img {
+    width: 810px;
+    height: 420px;
+    float: left;
+  }
+  section .arow .first .dot {
+    position: relative;
+    width: 75px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  section .arow .first .dot a {
+    height: 10px;
+    width: 10px;
+    background-color: gray;
+    border-radius: 50% 50%;
+    float: left;
+    margin: 0 0 10px;
+  }
+  section .arow ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  section .arow ul li {
+    width: 20%;
+    overflow: hidden;
+  }
+  section .arow ul li div {
+    width: 100%;
+    background-color: red;
+    margin-top: 10px;
+    overflow: hidden;
+    min-width: 0;
+    background-image: url("../img/P_00.jpg");
+    background-position: center center;
+  }
+  section .arow ul li div a {
+    opacity: 0;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-color: rgba(254, 254, 65, 0.5);
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  section .arow ul li div a img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  section .arow ul li div a span {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    display: block;
+  }
+  section .arow ul li div:hover a {
+    opacity: 1;
+  }
+  section .arow #air {
+    margin-top: 100px;
+  }
+  .menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #808080;
+  }
+  .menu a {
+    width: 15%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    text-align: center;
+    color: #808080;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .menu a:hover {
+    background-color: #808080;
+    transition: .5s;
+    color: white;
+  }
+  .menuarrow {
+    display: none;
+    background-color: white;
+  }
+}
+/*# sourceMappingURL=DRAWING.css.map */

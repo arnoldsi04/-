@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/BIM.css" />
+		<title></title>
+		<style type="text/css">
+			/*html,body {
+				overflow: scroll;
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="nav_pc">
+				<div class="logo">
+					<a href="#" class="logo">
+						<img src="img/shininglogo.png" />
+					</a>
+				</div>
+				<ul>
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="DRAWING.html">Renderings</a>
+					<a href="BIM.html">BIM</a>
+					<a href="animate.html">3D Animat</a>
+					<a href="contact.html">Contact</a>
+				</ul>
+			</div>
+			<div class="nav_phone">
+				<div class="logo">
+					<a href="#" class="logo">
+						<img src="img/shininglogo.png" />
+					</a>
+				</div>
+				<img src="img/nav.png" class="phoneNavImg" />
+			</div>
+		</div>
+		<section>
+			<div class="menuarrow">
+				<div class="menu">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="DRAWING.html">Renderings</a>
+					<a href="BIM.html">BIM</a>
+					<a href="animate.html">3D Animat</a>
+					<a href="contact.html">Contact</a>
+				</div>
+			</div>
+			<div class="title">
+				<img src="img/line_yellow.png" alt="" />
+				<span>OUR SERVICE</span>
+				<img src="img/line_yellow.png" alt="" />
+			</div>
+		</section>
+		<div class="mid">
+			<div class="scroll1">
+				<div class="header">
+					<div class="header1_model">
+						<p>1.MODEL COMPLETION</p>
+						<span>Establishing and creat the visible and multi-dimension <br />Architecture,Structural and MEP model.</span>
+						<div class="modelImg">
+							<img src="img/BIM-p1-1.png" alt="" />
+							<img src="img/BIM-p1-2.png" alt="" />
+							<img src="img/BIM-p1-3.png" alt="" />
+						</div>
+					</div>
+					<img src="img/building1-half-t.png" id="bud1" />
+				</div>
+			</div>
+			<div class="scroll2">
+				<div class="header">
+					<div class="header1_model">
+						<p>2.CLASH DETECTION</p>
+						<span>Completing the clash detection among varous design parties,engineers and even different organisations in con struction drawings.</span>
+						<div class="modelImg">
+							<img src="img/BIM-p2-1.jpg" alt="" />
+							<img src="img/BIM-p2-2.jpg" alt="" />
+						</div>
+					</div>
+					<img src="img/building1-half-b.png" id="bud2" />
+				</div>
+			</div>
+			<div class="scroll3">
+				<div class="header">
+					<img src="img/building2-half-t.png" id="bud3" />
+					<div class="header1_model">
+						<p>3.MEP INTEGRATION</p>
+						<span>Profoundly completing the pipeline integration,design coordination and intra-organisational cooperation between Plumbling,HVAC and Electrical engineering.</span>
+						<div class="modelImg">
+							<img src="img/BIM-p3-1.jpg" alt="" />
+							<img src="img/BIM-p3-2.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll4">
+				<div class="header">
+					<img src="img/building2-half-b.png" id="bud4" />
+					<div class="header1_model">
+						<p>4.MEP INTEGRATION</p>
+						<span>Profoundly completing the pipeline integration,design coordination and intra-organisational cooperation between Plumbling,HVAC and Electrical engineering.</span>
+						<div class="modelImg">
+							<img src="img/BIM-p4-1.jpg" alt="" />
+							<img src="img/BIM-p4-2.jpg" alt="" />
+						</div>
+					</div>
+					<img src="img/building3-half-t.png" id="bud5" />
+				</div>
+			</div>
+			<div class="scroll5">
+				<div class="header">
+
+					<div class="header1_model">
+						<p>5.MEP INTEGRATION</p>
+						<span>Profoundly completing the pipeline integration,design coordination and intra-organisational cooperation between Plumbling,HVAC and Electrical engineering.</span>
+
+					</div>
+					<img src="img/building3-half-b.png" id="bud6" />
+					<img src="img/top.png" id="bud7" />
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div>
+				<img src="img/line_yellow.png" alt="" />
+				<span>CONTACT US</span>
+				<img src="img/line_yellow.png" alt="" />
+			</div>
+			<div class="foot">
+				<p>Email：eric@shining365.com</p>
+				<p>Mobile Phone：86 138 1690 3400</p>
+				<p>Tel：+86 21 6598 6866-304 +86 21 6598 3188-304</p>
+				<p>Tel：+86 21 6598 6866-304 <br /> +86 21 6598 3188-304</p>
+			</div>
+		</footer>
+		<div class="bot">Copyright &copy; 1998-2015 shining Group</div>
+	</body>
+	<script src="js/jQuery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#bud7").click(function() {
+				$("html,body").animate({
+					scrollTop: 0
+				})
+			})
+			// 滚轮事件兼容ie 与 firefox 同时阻止默认事件
+		function mousewheel(obj, func) {
+			var ff = navigator.userAgent.indexOf("Firefox");
+			if (ff == -1) {
+				obj.onmousewheel = wheel;
+			} else {
+				obj.addEventListener("DOMMouseScroll", wheel, false);
+			}
+
+			function wheel(event) {
+				var e = event || window.event;
+				var down = true;
+				if (e.detail) {
+					down = e.detail > 0;
+				} else {
+					down = e.wheelDelta < 0;
+				}
+				func.apply(obj, [event, down]);
+				if (e.preventDefault) {
+					e.preventDefault();
+				} else {
+					e.returnValue = false;
+				}
+			}
+		}
+		var body = document.querySelector("body");
+		var index = 0;
+		var useScroll = true;
+		mousewheel(body, function(a, b) {
+			setTimeout(function(){
+				if (useScroll) {
+				useScroll = false;
+				var heiArrs = new Array();
+				var nowHei = $(document).scrollTop();
+				heiArrs[0] = 0;
+				heiArrs[1] = $("section").innerHeight() - $(".wrap").innerHeight();
+				heiArrs[2] = $(".scroll2").offset().top - $(".wrap").innerHeight();
+				heiArrs[3] = $(".scroll3").offset().top - $(".wrap").innerHeight();
+				heiArrs[4] = $(".scroll4").offset().top - $(".wrap").innerHeight();
+				heiArrs[5] = $(".scroll5").offset().top - $(".wrap").innerHeight();
+				heiArrs[6] = $("body").innerHeight() - window.innerHeight;
+				//			for (var i = 0; i < heiArrs.length;i++) {
+				for (var j = 0; j < heiArrs.length; j++) {
+					if (nowHei >= parseInt(heiArrs[j])) {
+						index = j
+					} else {
+						break;
+					}
+				}
+				console.log(nowHei);
+				console.log(heiArrs);
+				if (b) {
+					$("html,body").animate({
+						scrollTop: heiArrs[index + 1]
+					},function(){
+						useScroll = true;
+					});
+				} else {
+					$("html,body").animate({
+						scrollTop: heiArrs[index - 1]
+					},function(){
+						useScroll = true;
+					});
+				}
+			} else {
+				null;
+			}
+			},400)
+		})
+		var logo = $(".phoneNavImg");
+		logo.click(function() {
+			$(".menuarrow").slideToggle();
+		})
+	</script>
+
+</html>

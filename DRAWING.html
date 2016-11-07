@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/DRAWING.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="nav_pc">
+				<div class="logo">
+					<a href="#" class="logo">
+						<img src="img/shininglogo.png" />
+					</a>
+				</div>
+				<ul>
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="DRAWING.html">Renderings</a>
+					<a href="BIM.html">BIM</a>
+					<a href="animate.html">3D Animat</a>
+					<a href="contact.html">Contact</a>
+				</ul>
+			</div>
+			<div class="nav_phone">
+				<div class="logo">
+					<a href="#" class="logo">
+						<img src="img/shininglogo.png" />
+					</a>
+				</div>
+				<img src="img/nav.png" class="phoneNavImg" />
+			</div>
+		</div>
+		<section>
+			<div class="menuarrow">
+				<div class="menu">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="DRAWING.html">Renderings</a>
+					<a href="BIM.html">BIM</a>
+					<a href="animate.html">3D Animat</a>
+					<a href="contact.html">Contact</a>
+				</div>
+			</div>
+			<div class="secTitle">
+				<img src="img/line_yellow.png" alt="" />
+				<span>DIGITAL EFFECT DRAWING</span>
+				<img src="img/line_yellow.png" alt="" />
+			</div>
+			<div class="arow">
+				<div class="first">
+					<div class="train">
+						<img src="img/drawing-big1.jpg" alt="" />
+						<img src="img/drawing-big1.jpg" alt="" />
+						<img src="img/drawing-big1.jpg" alt="" />
+						<img src="img/drawing-big1.jpg" alt="" />
+						<img src="img/drawing-big1.jpg" alt="" />
+						<img src="img/drawing-big1.jpg" alt="" />
+					</div>
+					<div class="dot">
+						<a onclick="moveTo(0)"></a>
+						<a onclick="moveTo(1)"></a>
+						<a onclick="moveTo(2)"></a>
+						<a onclick="moveTo(3)"></a>
+						<a onclick="moveTo(4)"></a>
+					</div>
+				</div>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<img src="img/top.png" alt="" id="air" />
+			</div>
+		</section>
+		<footer>
+			<div>
+				<img src="img/line_yellow.png" alt="" />
+				<span>CONTACT US</span>
+				<img src="img/line_yellow.png" alt="" />
+			</div>
+			<div class="foot">
+				<p>Email：eric@shining365.com</p>
+				<p>Mobile Phone：86 138 1690 3400</p>
+				<p>Tel：+86 21 6598 6866-304 +86 21 6598 3188-304</p>
+				<p>Tel：+86 21 6598 6866-304 <br /> +86 21 6598 3188-304</p>
+			</div>
+		</footer>
+		<div class="bot">Copyright &copy; 1998-2015 shining Group</div>
+	</body>
+	<script src="js/jQuery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// 大图滚动部分
+		var train = $(".train");
+		var imgs = $(".train img");
+		var dots = document.querySelectorAll(".dot a");
+		train.le = 0;
+		dots[0].style.backgroundColor = "orange";
+		function moveTo(index) {
+//			console.log(train);
+			var e = index || train.le;
+			train.le = e;
+			index == 0?e=0:null;
+			for (var i = 0; i< dots.length; i ++) {
+				i==e?dots[i].style.backgroundColor = "orange":dots[i].style.backgroundColor = "gray";
+			}
+			console.log(e);
+			if (e == 5) {
+				dots[0].style.backgroundColor = "orange";
+			}
+//			e==5?dots[0].style.backgroundColor = "orange";
+			train.animate({left:-imgs[0].offsetWidth * e + "px"});
+		}
+		function moveNext() {
+			train.le += 1;
+//			train.le == 5? train.le = 0:null;
+			if (train.le == 6) {
+				train[0].style.left = 0 + "px";
+				train.le = 1;
+			}
+			moveTo(train.le);
+		}
+		train.timer = setInterval(moveNext,3000);
+		
+		// 瀑布流部分
+		var lis = $(".arow ul li");
+		var liHeightArrs = [0,0,0,0];
+		var indexMin = 0;
+		for (var i = 0; i< 14; i ++) {
+			// 获取li最低的下标
+			var heightMin = liHeightArrs[0];
+			for (var j = 1; j<lis.length;j++) {
+//				var heightMin = liHeightArrs[0];
+				heightMin<liHeightArrs[j]?null:heightMin = liHeightArrs[j];
+			}
+			for (var j = 0; j<liHeightArrs.length;j++) {
+				if (heightMin == liHeightArrs[j]) {
+					indexMin = j;
+					break;
+				}
+			}
+			var newDiv = $("<div><a href='#'><img src='img/magnifier.png' alt='' /><span>我是文字</span></a></div>");
+			newDiv.css({
+				"background-image":"url(img/P_0"+i+".jpg)"
+			})
+			newDiv.css({height:fnRandom(100,220)+"px"}).appendTo(lis[indexMin]);
+			liHeightArrs[indexMin]+=newDiv.outerHeight();
+			console.log(indexMin);
+		}
+		//随机高度函数
+		function fnRandom(min,max) {
+			return parseInt(Math.random()*(max-min) + min)
+		}
+		//火箭
+		$("#air").click(function(){
+			$("html,body").animate({scrollTop:0});
+		})
+
+		$(".train").css({
+			width:$(".arow")[0].offsetWidth*6 + 'px',
+			height:$(".arow")[0].offsetWidth*hw  + 'px',
+			left:-$(".arow")[0].offsetWidth * train.le + "px"
+		})
+		var hw = 42/81;
+		// 等比例缩放
+		window.onresize = function() {
+			clearInterval(train.timer);
+			$(".train img").css({
+				width:$(".arow")[0].offsetWidth + 'px',
+				height:$(".arow")[0].offsetWidth*hw  + 'px'
+			})
+			$(".train").css({
+				width:$(".arow")[0].offsetWidth*6 + 'px',
+				height:$(".arow")[0].offsetWidth*hw  + 'px',
+				left:-$(".arow")[0].offsetWidth * train.le + "px"
+			})
+			$(".first").css({
+				height:$(".arow")[0].offsetWidth*hw  + 'px'
+			})
+			console.log($(".arow")[0].offsetWidth);
+			train.timer = setInterval(moveNext,3000);
+		}
+		// 移动端菜单
+		var logo = $(".phoneNavImg");
+		logo.click(function() {
+			$(".menuarrow").slideToggle();
+		})
+		
+		var trainImg = $(".train img");
+//		trainImg.click(function(e){
+//			e.preventDefault();
+//		})
+		trainImg.mousemove(function(e){
+			e.preventDefault();
+		})
+		trainImg.click(function(e){
+			e.preventDefault();
+		})
+//		trainImg.on(return false)
+window.ondragstart = function(event){
+	var e = event || window.event;
+	if(e.preventDefault) {
+		e.preventDefault();
+	} else {
+		e.returnValue = false;
+	}
+}
+//	train.mousedown(function(e){
+//		var xOr = e.clientX;
+//		clearInterval(train.timer);
+//		var xpre = train[0].offsetLeft;
+//		window.onmousemove =function move(e1){
+//			var needX = e1.clientX - xOr;
+//			train[0].style.left = xpre + needX + "px";
+//		};
+//
+//	})
+//	train.mouseup(function(){
+//		train.timer = setInterval(moveNext,3000);
+//		train.animate({left:-imgs[0].offsetWidth * train.le + "px"});
+//		window.onmousemove = null;
+//	});
+	</script>
+</html>
